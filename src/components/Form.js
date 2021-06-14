@@ -7,7 +7,7 @@ class Task {
     this.isCompleted = isCompleted;
   }
 }
-function Form({ owner, setTodos }) {
+function Form({ owner, setTodos, changeStatus }) {
   const [task, setTask] = useState("");
   const isTodoPresent = (task, todoArr) => {
     return todoArr.some((todo) => todo.task === task);
@@ -45,6 +45,14 @@ function Form({ owner, setTodos }) {
             value={task}
           />
           <button>+</button>
+        </div>
+        <div className="select--container">
+          <select onChange={changeStatus}>
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+          <i className="fas fa-caret-down"></i>
         </div>
       </form>
     </div>
