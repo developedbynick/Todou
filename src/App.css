@@ -209,4 +209,7 @@ form select options {
   form select {
     background: #fff;
   }
+  .search--container {
+    margin-right: 0px;
+  }
 }
