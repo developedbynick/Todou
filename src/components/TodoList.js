@@ -1,6 +1,6 @@
 import React from "react";
 import Todo from "./Todo.js";
-function TodoList({ todos,setTodos }) {
+function TodoList({ todos, setTodos }) {
   return (
     <div className="todo--list">
       {todos.map((todo) => {
